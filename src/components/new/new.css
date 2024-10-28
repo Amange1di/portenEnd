@@ -1,0 +1,18 @@
+.new {
+  padding: 100px 0;
+}
+
+.new .line {
+  margin: 40px auto;
+  width: 140px;
+  height: 3px;
+  background: #fff;
+}
+
+.generalCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+

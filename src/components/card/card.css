@@ -1,0 +1,48 @@
+.card {
+    width: 220px;
+    height: 305px;
+    margin: 50px 20px;
+    padding: 55px 20px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    .cardimg {
+        width: 200px;
+        background: #191B1C;
+        padding: 55px 20px;
+
+        img {
+            width: 200px;
+            height: 214px;
+        }
+
+    }
+
+    h5 {
+        color: #fff;
+        font-size: 18px;
+        margin-top: 25px;
+        cursor: pointer;
+      
+       
+    }
+
+    p {
+        margin-top: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1024) {
+    .card {
+        width: 200px;
+        height: 285px;
+        margin: 50px 20px;
+        padding: 55px 20px;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+}
+}
