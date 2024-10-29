@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { headerMenu } from "../../constants";
 import { BiCart } from "react-icons/bi";
-import Search from "../search/Search";
-import BurgerMenu from "../burgerMenu/BurgerMenu";
+import Search from "./search/Search";
+import BurgerMenu from "./burgerMenu/BurgerMenu";
 
 
 const Header = () => {

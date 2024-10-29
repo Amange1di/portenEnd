@@ -5,8 +5,8 @@ import { BsTelephone } from "react-icons/bs";
 import { TbLogin2 } from "react-icons/tb";
 import { BiCart } from "react-icons/bi";
 import Search from "../search/Search";
-import { headerMenu } from "../../constants";
-import "../header/header.css"
+import { headerMenu } from "../../../constants";
+import "../header.css"
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
