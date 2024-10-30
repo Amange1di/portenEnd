@@ -5,28 +5,25 @@ import service from '../../api/service';
 
 const Season = () => {
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
     const cardLimit = 3; 
 
     const fetchPosts = async () => {
         try {
             const data = await service.getAllProducts();
+            console.log(data, "---all posts data---");
+
             setPosts(data.slice(0, cardLimit)); 
         } catch (err) {
             console.error("Fetch error:", err);
-            setError("Не удалось загрузить коллекцию");
-        } finally {
-            setLoading(false);
-        }
+         
+        } 
     };
 
     useEffect(() => {
         fetchPosts();
     }, []);
 
-    if (loading) return <div className="loading">Загрузка...</div>;
-    if (error) return <div className="error">{error}</div>;
 
     return (
         <div className='Season'>
@@ -44,7 +41,7 @@ const Season = () => {
                     <div>
                         <h2 className='title_h2'>Новая коллекция</h2>
                         <div className='line'></div>
-                        <button onClick={() => console.log("Каталог button clicked")}>Каталог</button>
+                        <button >Каталог</button>
                     </div>
                 </div>
             </div>

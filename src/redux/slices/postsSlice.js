@@ -1,18 +1,14 @@
-// src/redux/slices/postsSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import service from "../../api/service"; // Правильный путь к сервису
-
-// Async thunk для получения данных о постах
+import service from "../../api/service"; 
 export const fetchPosts = createAsyncThunk(
     "posts/fetchPosts",
     async () => {
-        const { data } = await service.getAllPosts(); // Получение данных
-        console.log(data, "---all posts data---");
-        return data; // Возвращаем данные
+        const { data } = await service.getAllPosts(); 
+        return data;
     }
 );
 
-// Создаем срез состояния для постов
+
 const postsSlice = createSlice({
     name: "posts",
     initialState: {
@@ -24,18 +20,17 @@ const postsSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchPosts.pending, (state) => {
-                state.isLoading = true; // Устанавливаем статус загрузки
+                state.isLoading = true; 
             })
             .addCase(fetchPosts.fulfilled, (state, action) => {
-                state.isLoading = false; // Завершаем загрузку
-                state.items = action.payload; // Сохраняем полученные данные
+                state.isLoading = false; 
+                state.items = action.payload;
             })
             .addCase(fetchPosts.rejected, (state, action) => {
-                state.isLoading = false; // Завершаем загрузку
-                state.isError = action.error.message; // Сохраняем сообщение об ошибке
+                state.isLoading = false; 
+                state.isError = action.error.message; 
             });
     },
 });
 
-// Экспортируем редьюсер по умолчанию
 export default postsSlice.reducer; 

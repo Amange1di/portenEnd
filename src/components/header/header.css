@@ -88,7 +88,10 @@ header {
         margin: 0 20px;
     }
 }
-
+.headerMenu{
+    display: flex;
+    align-items: center;
+}
 /* ------------------------------------- */
 
 .burger-menu {

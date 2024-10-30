@@ -1,7 +1,6 @@
-// Card.js
-import React from "react";
 import cardImage from "../../assets/card.png"; 
 import "./card.css";
+
 import { useNavigate } from "react-router-dom"; 
 
 const Card = ({ post }) => {
@@ -20,7 +19,7 @@ const Card = ({ post }) => {
             <div className="cardimg">
                 <img src={cardImage} alt="Card" />
             </div>
-            {post ? (  // Conditional rendering
+            {post ? (  
                 <>
                     <h5 onClick={() => handleClick(post.id)}>{truncateText(post.title)}</h5>
                     <p>{truncateText(post.body)}</p>

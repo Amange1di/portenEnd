@@ -1,11 +1,10 @@
-// src/redux/store.js
 import { configureStore } from "@reduxjs/toolkit";
-import postsReducer from "./slices/postsSlice"; // Правильный путь к редьюсеру
+import postsReducer from "./slices/postsSlice"; 
 
 const store = configureStore({
     reducer: {
-        posts: postsReducer, // Добавляем редьюсер в хранилище
+        posts: postsReducer, 
     },
 });
 
-export default store; // Экспортируем хранилище
+export default store; 

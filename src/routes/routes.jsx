@@ -1,12 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Detail from "../pages/detail/Detail";
+import Cart from "../pages/cart/Cart";
 
 const menu = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
   },
   {
     path: "/detail/:id",

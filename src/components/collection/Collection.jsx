@@ -1,4 +1,3 @@
-import React from 'react'
 import "./collection.css"
 const Collection = () => {
     return (

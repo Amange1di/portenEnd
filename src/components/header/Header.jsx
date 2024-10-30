@@ -1,16 +1,20 @@
-// Header.js
 import "./header.css";
 import { BsTelephone } from "react-icons/bs";
 import { TbLogin2 } from "react-icons/tb";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { headerMenu } from "../../constants";
 import { BiCart } from "react-icons/bi";
 import Search from "./search/Search";
-import BurgerMenu from "./burgerMenu/BurgerMenu";
-
+import BurgerMenu from "./BurgerMenu";
+import NavMenu from "./NavMenu";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/cart`);
+  };
+
   return (
     <header>
       <div className="container">
@@ -32,18 +36,13 @@ const Header = () => {
           <div className="header_bottom">
             <img src={logo} alt="PORTEN Logo" />
             <div className="nav">
-              {headerMenu.map((page) => (
-                <NavLink key={page.name} to={page.path} className="link">
-                  {page.name}
-                </NavLink>
-              ))}
+              <NavMenu />
               <div className="header-icons">
-                <BiCart className="iconCard" />
+                <BiCart onClick={handleClick} className="iconCard" />
                 <Search />
               </div>
             </div>
           </div>
-          
         </div>
         <BurgerMenu />
       </div>
