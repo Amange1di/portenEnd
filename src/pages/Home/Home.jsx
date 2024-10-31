@@ -13,7 +13,6 @@ const Home = () => {
       <Collection />
       <New />
       <Brands />
-
     </div>
   )
 }

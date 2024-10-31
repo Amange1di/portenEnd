@@ -1,7 +1,7 @@
 export const headerMenu=[
    
     {
-        name:"ПОНРАВИЛОСЬ",
+        name:"ГЛАВНЫЙ",
         path:"/"
     },
     {
