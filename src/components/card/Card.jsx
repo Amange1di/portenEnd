@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { addToLike, removeFromLike } from "/src/redux/slices/favoritesSlice";
 import { addItemToCart } from "/src/redux/slices/cartSlice";

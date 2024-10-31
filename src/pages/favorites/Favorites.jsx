@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromLike, clearFavorites } from "../../redux/slices/favoritesSlice";
+import {  clearFavorites } from "../../redux/slices/favoritesSlice";
 import "./favorites.css";
 import { toast } from "react-toastify";
 import Card from "../../components/card/Card";
-import Slider from "react-slick"; // Импортируем Slider из react-slick
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
