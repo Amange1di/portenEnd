@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./header.css";
 import { BsTelephone } from "react-icons/bs";
 import { TbLogin2 } from "react-icons/tb";
@@ -8,7 +8,7 @@ import { BiCart } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa"; 
 import { useSelector } from "react-redux";
 import Search from "./search/Search";
-import BurgerMenu from "./BurgerMenu";
+import BurgerMenu from "./burgermenu/BurgerMenu";
 import NavMenu from "./NavMenu";
 
 const Header = () => {

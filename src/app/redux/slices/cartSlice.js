@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    items: [], // Массив для хранения товаров в корзине
+    items: [], 
 };
 
 const cartSlice = createSlice({
@@ -11,10 +11,10 @@ const cartSlice = createSlice({
         addItemToCart: (state, action) => {
             const existingItem = state.items.find(item => item.id === action.payload.id);
             if (existingItem) {
-                // Если товар уже есть в корзине, увеличиваем его количество
+              
                 existingItem.quantity += 1;
             } else {
-                // Иначе добавляем товар с количеством 1
+            
                 state.items.push({ ...action.payload, quantity: 1 });
             }
         },

@@ -1,23 +1,24 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./season.css";
-import Card from '../card/Card'; 
-import service from '../../api/service'; 
+
+import service from '../../../../api/service';
+import Card from '../../../../components/card/Card';
 
 const Season = () => {
     const [posts, setPosts] = useState([]);
 
-    const cardLimit = 3; 
+    const cardLimit = 3;
 
     const fetchPosts = async () => {
         try {
             const data = await service.getAllProducts();
             console.log(data, "---all posts data---");
 
-            setPosts(data.slice(0, cardLimit)); 
+            setPosts(data.slice(0, cardLimit));
         } catch (err) {
             console.error("Fetch error:", err);
-         
-        } 
+
+        }
     };
 
     useEffect(() => {

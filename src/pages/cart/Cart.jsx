@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItemFromCart, updateItemQuantity, clearCart } from "../../redux/slices/cartSlice"; 
+import { removeItemFromCart, updateItemQuantity, clearCart } from "../../app/redux/slices/cartSlice"; 
 import { toast } from "react-toastify";
 import "./cart.css";
 import cardImage from "../../assets/card.png";

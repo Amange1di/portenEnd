@@ -1,24 +1,29 @@
-import  { useState } from 'react';
-import "../user.css"
+import { useState } from 'react';
+import "../user.css";
 import { NavLink } from 'react-router-dom';
 
 const Register = () => {
   const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь можно добавить логику регистрации
     console.log('Email:', email);
+    console.log('Name:', text);
     console.log('Password:', password);
   };
 
   return (
     <form className='user' onSubmit={handleSubmit}>
       <h1>Регистрация</h1>
-      <div >
+      <div>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      </div>
+      <div>
+        <label>Имя:</label>
+        <input type="text" value={text} onChange={(e) => setText(e.target.value)} required />
       </div>
       <div>
         <label>Пароль:</label>
@@ -26,7 +31,7 @@ const Register = () => {
       </div>
       <button type="submit">Зарегистрироваться</button>
       <p>
-        У вас есть аккаунт?  <NavLink to="/login" >Войти</NavLink>
+        У вас есть аккаунт? <NavLink to="/login">Войти</NavLink>
       </p>
     </form>
   );

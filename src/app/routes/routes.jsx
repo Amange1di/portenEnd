@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/home/Home";
-import Detail from "../pages/detail/Detail";
-import Login from "../pages/user/login/Login";
-import Register from "../pages/user/regis/Register";
-import Cart from "../pages/cart/Cart";
-import Favorites from "../pages/favorites/Favorites";
+import Home from "../../pages/home/Home";
+import Detail from "../../pages/detail/Detail";
+import Login from "../../pages/user/login/Login";
+import Register from "../../pages/user/regis/Register";
+import Cart from "../../pages/cart/Cart";
+import Favorites from "../../pages/favorites/Favorites";
+import NotFoundPage from "../../pages/notFoundPage/NotFoundPage";
 
 const menu = [
   {
@@ -32,6 +33,7 @@ const menu = [
     name: "Login",
     component: Login,
   },
+
   {
     path: "/detail/:id",
     name: "Detail",
@@ -49,6 +51,7 @@ const AppRoutes = () => {
           element={<route.component />}
         />
       ))}
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

@@ -1,6 +1,7 @@
 import './brands.css';
-import brands from '../../assets/brands.png';
 
+
+import brands from '../../../.././assets/brands.png'
 const Brands = () => {
     
     const brandsArray = [brands, brands, brands, brands];

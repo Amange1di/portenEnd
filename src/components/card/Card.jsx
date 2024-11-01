@@ -1,7 +1,7 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import { addToLike, removeFromLike } from "/src/redux/slices/favoritesSlice";
-import { addItemToCart } from "/src/redux/slices/cartSlice";
+import { addToLike, removeFromLike } from "../../app/redux/slices/favoritesSlice";
+import { addItemToCart } from "../../app/redux/slices/cartSlice";
 import cardImage from "../../assets/card.png";
 import "./card.css";
 import { useNavigate } from "react-router-dom";
@@ -33,6 +33,10 @@ const Card = ({ post }) => {
             toast.success("Товар добавлен в избранное");
         }
     };
+    const handleCardToggle=()=>{
+         dispatch(addItemToCart(post)) 
+         toast.success("Товар добавлен в корзину");
+    }
 
     return (
         <div className="card">
@@ -49,7 +53,8 @@ const Card = ({ post }) => {
                 </div>
                 <img src={cardImage} alt="Card" />
             </div>
-            <button className="btnCart" onClick={() => dispatch(addItemToCart(post))}>
+            
+            <button className="btnCart" onClick={handleCardToggle}>
                 В корзину
             </button>
             {post ? (

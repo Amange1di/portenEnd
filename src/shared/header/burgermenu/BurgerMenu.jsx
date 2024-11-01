@@ -1,19 +1,30 @@
 
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
 import { TbLogin2 } from "react-icons/tb";
 import { BiCart } from "react-icons/bi";
-import Search from "./search/Search";
-import { headerMenu } from "../../constants";
-import "./header.css"
+import Search from "../search/Search";
+import { headerMenu } from "../constants";
+import "../header.css"
+import { useSelector } from "react-redux";
+import { FaRegHeart } from "react-icons/fa";
 const BurgerMenu = () => {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
+  const cartItemsCount = useSelector((state) => state.cart.items.length);
+  const favoritesCount = useSelector((state) => state.favorites.items.length);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const handleCartClick = () => {
+    navigate(`/cart`);
+  };
+  const handleFavoritesClick = () => {
+    navigate(`/favorites`);
+  };
   return (
     <div className="burger-menu">
       <input
@@ -42,8 +53,19 @@ const BurgerMenu = () => {
           </li>
         ))}
         <div className="header-icons">
-          <BiCart className="iconCard" />
-          <Search />
+          <div className="cart-icon-container" onClick={handleCartClick}>
+            <BiCart className="iconCard" />
+            {cartItemsCount > 0 && (
+              <span className="cart-count">{cartItemsCount}</span>
+            )}
+          </div>        
+          <div className="cart-icon-container" onClick={handleFavoritesClick}>
+                  <FaRegHeart className="iconCard" />
+                  {favoritesCount > 0 && (
+                    <span className="cart-count">{favoritesCount}</span>
+                  )}
+                </div>
+            <Search />
         </div>
         <div className="auth-links">
           <TbLogin2 className="icon2" />

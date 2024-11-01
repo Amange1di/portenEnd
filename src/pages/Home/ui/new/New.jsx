@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import Card from "../card/Card";
-import service from "../../api/service";
+
+import service from '../../../../api/service';
+import Card from '../../../../components/card/Card';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,7 +34,7 @@ const New = () => {
           dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 1,  
+          slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
         });
@@ -41,7 +43,7 @@ const New = () => {
           dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 2,  
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
         });
@@ -50,16 +52,16 @@ const New = () => {
           dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 3,  
+          slidesToShow: 3,
           slidesToScroll: 1,
           arrows: false,
         });
       } else {
-        setSliderSettings(null); 
+        setSliderSettings(null);
       }
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {  clearFavorites } from "../../redux/slices/favoritesSlice";
+import { clearFavorites } from "../../app/redux/slices/favoritesSlice";
 import "./favorites.css";
 import { toast } from "react-toastify";
-import Card from "../../components/card/Card";
+import Card from '../../components/card/Card';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Favorites = () => {
     const dispatch = useDispatch();
-    const favorites = useSelector((state) => state.favorites.items); 
+    const favorites = useSelector((state) => state.favorites.items);
     const [sliderSettings, setSliderSettings] = useState(null);
 
-    
+
     const handleResize = () => {
         if (window.innerWidth < 500) {
             setSliderSettings({
@@ -47,7 +47,7 @@ const Favorites = () => {
         }
     };
 
-    
+
     useEffect(() => {
         handleResize();
         window.addEventListener("resize", handleResize);
