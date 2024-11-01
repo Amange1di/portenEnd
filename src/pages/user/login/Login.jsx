@@ -1,7 +1,7 @@
-import  { useState } from 'react';
-import "../user.css"
-import { NavLink } from 'react-router-dom';
-const Login = () => {
+import { useState } from 'react';
+import "../user.css";
+
+const Login = ({ openRegisterModal }) => { 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,19 +12,29 @@ const Login = () => {
   };
 
   return (
-    <form  className='user' onSubmit={handleSubmit}>
+    <form className="user" onSubmit={handleSubmit}>
       <h1>Войти</h1>
-      <div >
+      <div>
         <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
       </div>
       <div>
         <label>Пароль:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
       </div>
       <button type="submit">Войти</button>
       <p>
-        Нет аккаунта?    <NavLink to="/register" >Регистрация</NavLink>
+        Нет аккаунта? <span style={{ cursor: 'pointer', color: 'blue' }}  onClick={openRegisterModal} className="login-link">Регистрация</span>
       </p>
     </form>
   );

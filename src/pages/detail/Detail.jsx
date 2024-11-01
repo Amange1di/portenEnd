@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import cardImage from '../../assets/card.png';
+import cardImage from '../../shared/assets/card.png';
 import "./detail.css"
 const Detail = () => {
   const { id } = useParams();

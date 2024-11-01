@@ -3,9 +3,9 @@ import Home from "../../pages/home/Home";
 import Detail from "../../pages/detail/Detail";
 import Login from "../../pages/user/login/Login";
 import Register from "../../pages/user/regis/Register";
-import Cart from "../../pages/cart/Cart";
-import Favorites from "../../pages/favorites/Favorites";
 import NotFoundPage from "../../pages/notFoundPage/NotFoundPage";
+import Cart from "../../processes/cart/Cart";
+import Favorites from "../../processes/favorites/Favorites";
 
 const menu = [
   {
