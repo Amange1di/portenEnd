@@ -6,6 +6,7 @@ import { BiCart } from "react-icons/bi";
 import Search from "./Search";
 import { headerMenu } from "../../../constants";
 import "../header.css";
+import "../burgermenu.css";
 import { useSelector } from "react-redux";
 import { FaRegHeart } from "react-icons/fa";
 import Modal from "../../../components/modal/Modal";
@@ -33,15 +34,15 @@ const BurgerMenu = () => {
   };
 
   const openLoginModal = () => {
-    setActiveModal("login"); 
+    setActiveModal("login");
   };
 
   const openRegisterModal = () => {
-    setActiveModal("register"); 
+    setActiveModal("register");
   };
 
   const closeModal = () => {
-    setActiveModal(null); 
+    setActiveModal(null);
   };
 
   return (

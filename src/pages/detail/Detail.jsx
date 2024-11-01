@@ -21,9 +21,6 @@ const Detail = () => {
     fetchCardDetail();
   }, [id]);
 
-  if (!card) {
-    return <div>Loading...</div>; // Показать индикатор загрузки
-  }
 
   return (
     <div className="detail-container">
