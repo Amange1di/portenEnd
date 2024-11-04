@@ -1,4 +1,4 @@
-import "./collection.css"
+import "./collection.scss"
 const Collection = () => {
     return (
         <div className='collection'>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "../user.css";
+import "../user.scss";
 import Register from '../regis/Register';
 
 const Login = () => {

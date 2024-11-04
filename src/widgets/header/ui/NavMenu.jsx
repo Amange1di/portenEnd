@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { headerMenu } from "../../../constants";
-import "../header.css"
+import "../header.scss"
 const NavMenu = () => {
   return (
     <div className="headerMenu">

@@ -1,4 +1,4 @@
-import './brands.css';
+import './brands.scss';
 
 
 import brands from "../../shared/assets/brands.png"

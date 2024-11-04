@@ -1,5 +1,5 @@
 
-import "./hero.css"
+import "./hero.scss"
 import logo from '../.././shared/assets/logo.png'
 
 const herodata = [

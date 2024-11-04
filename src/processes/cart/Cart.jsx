@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItemFromCart, updateItemQuantity, clearCart } from "../../app/redux/slices/cartSlice"; 
 import { toast } from "react-toastify";
-import "./cart.css";
+import "./cart.scss";
 import cardImage from "../../shared/assets/card.png";
 
 const Cart = () => {

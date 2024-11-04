@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearFavorites } from "../../app/redux/slices/favoritesSlice";
-import "./favorites.css";
+import "./favorites.scss";
 import { toast } from "react-toastify";
 import Card from '../../widgets/card/Card';
 import Slider from "react-slick";

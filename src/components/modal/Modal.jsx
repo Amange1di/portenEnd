@@ -1,5 +1,5 @@
 
-import "./modal.css";
+import "./modal.scss";
 
 const Modal = ({ show, onClose, children }) => {
   if (!show) return null;

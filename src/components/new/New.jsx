@@ -6,7 +6,7 @@ import Card from '../../widgets/card/Card';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./new.css";
+import "./new.scss";
 
 const New = () => {
   const [posts, setPosts] = useState([]);

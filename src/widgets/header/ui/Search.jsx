@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../search.css"
+import "../search.scss"
 const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
 

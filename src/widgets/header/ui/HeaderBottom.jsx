@@ -25,7 +25,8 @@ const HeaderBottom = () => {
             <FaRegHeart className="iconCard" />
             {favoritesCount > 0 && <span className="cart-count">{favoritesCount}</span>}
           </div>
-          <Search />
+          
+          <Search  />
         </div>
       </div>
     </div>

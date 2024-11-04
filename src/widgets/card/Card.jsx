@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToLike, removeFromLike } from "../../app/redux/slices/favoritesSlice";
 import { addItemToCart } from "../../app/redux/slices/cartSlice";
 import cardImage from "../../shared/assets/card.png";
-import "./card.css";
+import "./card.scss";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

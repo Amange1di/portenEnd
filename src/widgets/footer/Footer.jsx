@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
-import "./footer.css"
+import "./footer.scss"
 
 const dataCategories = [
 

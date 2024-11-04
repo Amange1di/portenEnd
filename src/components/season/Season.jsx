@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import "./season.css";
+import "./season.scss";
 
 import service from '../../api/service';
 import Card from '../../widgets/card/Card';
