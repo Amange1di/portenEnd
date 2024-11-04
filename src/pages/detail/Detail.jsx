@@ -19,7 +19,7 @@ const Detail = () => {
 
   useEffect(() => {
     fetchCardDetail();
-  }, [id]);
+  }, []);
 
 
   return (
