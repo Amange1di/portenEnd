@@ -43,6 +43,7 @@ const Season = () => {
                         <h2 className='title_h2'>Новая коллекция</h2>
                         <div className='line'></div>
                         <button >Каталог</button>
+                        
                     </div>
                 </div>
             </div>

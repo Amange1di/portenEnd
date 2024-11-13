@@ -2,20 +2,40 @@ import React from "react";
 import { BsTelephone } from "react-icons/bs";
 import { TbLogin2 } from "react-icons/tb";
 
+import { useTranslation } from "react-i18next";
 const HeaderTop = ({ openModal }) => {
+
+  const { t, i18n } = useTranslation(); 
+  const handleChangeLang = ({ target: { value } }) => {
+    i18n.changeLanguage(value);
+  }; 
   return (
     <div className="header_top">
       <div className="contact-info">
         <BsTelephone className="icon" />
         <p>8 (812) 123-45-67</p>
-        <p>Работаем 7 дней в неделю</p>
+        <p>{t("We work 7 days a week")}</p>
         <p>9:00 — 18:00</p>
       </div>
       <div className="auth-links">
+      <select
+            onChange={handleChangeLang}
+            style={{
+              background: "#000",
+              color: "#fff",
+              border: "none",
+              marginRight
+              :"10px"
+            }}
+          >
+            <option value="en">{t("English")}</option>
+            <option value="ru">{t("Russian")}</option>
+            <option value="kg">{t("Kyrgyz")}</option>
+          </select>
         <TbLogin2 className="icon2" />
-        <button onClick={() => openModal("login")} className="login-link">Войти</button>
+        <button onClick={() => openModal("login")} className="login-link">{t("Login")}</button>
         <span> / </span>
-        <button onClick={() => openModal("register")} className="login-link">Регистрация</button>
+        <button onClick={() => openModal("register")} className="login-link">{t("Registration")}</button>
       </div>
     </div>
   );

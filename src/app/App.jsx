@@ -8,7 +8,11 @@ import { ToastContainer } from "react-toastify";
 import Header from "../widgets/header/Header";
 import Footer from "../widgets/footer/Footer";
 
+
 const App = () => {
+
+
+  
   return (
 
     <div className='containerOne'>

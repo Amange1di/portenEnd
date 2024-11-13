@@ -1,13 +1,16 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItemFromCart, updateItemQuantity, clearCart } from "../../app/redux/slices/cartSlice"; 
+import { removeItemFromCart, updateItemQuantity, clearCart } from "../../app/redux/slices/cartSlice";
 import { toast } from "react-toastify";
 import "./cart.scss";
+import { useTranslation } from "react-i18next";
+
 import cardImage from "../../shared/assets/card.png";
 
 const Cart = () => {
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.items);
+
+    const { t } = useTranslation();
 
     const handleRemoveItem = (id) => {
         dispatch(removeItemFromCart({ id }));
@@ -19,7 +22,7 @@ const Cart = () => {
     };
 
     const handleClearCart = () => {
-        if (window.confirm("Вы уверены, что хотите очистить корзину?")) {
+        {
             dispatch(clearCart());
             toast.warn("Корзина очищена");
         }
@@ -43,7 +46,7 @@ const Cart = () => {
                                 <div className="cart-item-details">
                                     <div className="item-info">
                                         <h5>{truncateText(item.title)}</h5>
-                                        
+
                                         <input
                                             type="number"
                                             value={item.quantity}
@@ -51,13 +54,13 @@ const Cart = () => {
                                             onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))}
                                         />
                                     </div>
-                                    <button onClick={() => handleRemoveItem(item.id)}>Удалить</button>
+                                    <button onClick={() => handleRemoveItem(item.id)}>{t("Delete ")}</button>
                                 </div>
                             </li>
                         ))}
                     </ul>
-                    <div className="cart-summary">
-                       
+                    <div className="cart-btn">
+
                         <button onClick={handleClearCart}>Очистить корзину</button>
                     </div>
                 </div>
