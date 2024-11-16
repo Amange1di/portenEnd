@@ -8,6 +8,10 @@
     "HOME": "БАШКЫ БЕТ",
     "PROFILE": "ЖЕКЕ КАБИНЕТ",
     "SETTINGS": "Орнотуулар",
+    "Search...":"Издөө...",
+
+"Saint Petersburg":"санкт-петербург",
+
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis. Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi. Tortor nibh magna feugiat id nunc, dui nisl viverra.": "Я знаю, что нужно сделать, чтобы избавиться от лишнего веса. Межпузырьковый пурус, проверяющий на прочность. Фрингилья диаметром с джусто, с якулисом стрелецким. И это касается не только якулиса. Пенатибус улламкорпер - это смертельная казнь, совершенная с тех пор, как я встретил фаретру, штат Мичиган. Преступник никогда не был великим преступником и никогда не был жив.",
     "Seasons 2020/21": "2020/21 сезондор",
     "New collection": "Жаңы коллекция",
@@ -32,7 +36,7 @@
     "Item added to favorites": "Товар сүйүктүүлөргө кошулду",
     "Item removed from favorites": "Товар сүйүктүүлөрдөн алынды",
     "Item added to cart": "Товар корзинага кошулду",
-    "Add to Cart": "Корзинага кошуу",
+    "Add to Cart": "Себетке кошуу",
     "Delete": "Өчүрүү",
     "About Store": "Дүкөн жөнүндө",
     "Categories": "Категориялар",
@@ -45,5 +49,6 @@
     "Jewelry": "зер буюмдар",
     "Cufflinks": "Запонкалар",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse.": "Биздин компанияга болгон кызыгууңуз үчүн рахмат жана биздин компанияга кош келиңиз. Учурда толук убакыттагы дипломдун үстүндө иштеп жатам. Азыр укмуштуудай нерсени баштоого эң сонун убакыт.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.": "Биздин компанияга болгон кызыгууңуз үчүн рахмат жана биздин компанияга кош келиңиз. Учурда мен күндүзгү жумушта иштейм."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.": "Биздин компанияга болгон кызыгууңуз үчүн рахмат жана биздин компанияга кош келиңиз. Учурда мен күндүзгү жумушта иштейм.",
+    "404 Not Found": "404 Табылган Жок"
 }

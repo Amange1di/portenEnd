@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "../search.scss"
+import { useTranslation } from "react-i18next";
 const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t  } = useTranslation(); 
 
   const toggleSearch = () => {
     setIsOpen(!isOpen);
@@ -10,7 +12,9 @@ const Search = () => {
   return (
     <div className='ser'>
       <div className={`searchbox ${isOpen ? 'open' : ''}`}>
-        <input type="text" className=' input' placeholder="поиска.." />
+        <input type="text" className=' input'
+         placeholder={t("Search...")}
+         />
         <button className="submit" onClick={toggleSearch}>
         </button>
       </div>
