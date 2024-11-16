@@ -1,16 +1,20 @@
 import { useState } from 'react';
 import "../user.scss";
 import Register from '../regis/Register';
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showLoginForm, setShowLoginForm] = useState(false);
+  const { t } = useTranslation(); 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Email:', email);
     console.log('Password:', password);
   };
+
   const toggleForms = () => {
     setShowLoginForm(!showLoginForm);
   };
@@ -21,7 +25,7 @@ const Login = () => {
         <Register openRegisterModal={toggleForms} />
       ) : (
         <form className="user" onSubmit={handleSubmit}>
-          <h1>Войти</h1>
+          <h1>{t("Login")}</h1>
           <div>
             <label>Email:</label>
             <input
@@ -32,7 +36,7 @@ const Login = () => {
             />
           </div>
           <div>
-            <label>Пароль:</label>
+            <label>Password:</label>
             <input
               type="password"
               value={password}
@@ -40,9 +44,9 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit">Войти</button>
+          <button type="submit">{t("Login")}</button>
           <p>
-            Нет аккаунта? <span onClick={toggleForms} style={{ cursor: 'pointer', color: 'blue' }}>Регистрация</span>
+            {t("Don't have an account?")} <span onClick={toggleForms} style={{ cursor: 'pointer', color: 'blue' }}>{t("Register")}</span>
           </p>
         </form>
       )}

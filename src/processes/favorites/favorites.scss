@@ -1,18 +1,34 @@
 .favorites {
-    & >div{
- margin: 100px ;
+       b {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto ;
+        margin-bottom: 50px;
     }
-    ul{
+    
+    &>div {
+        padding: 100px 0;
+    }
+
+ 
+
+    ul {
         display: flex;
         flex-wrap: wrap;
     }
-    button {
+
+    .btnFov {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 20px auto;
-    
-        padding: 5px 10px ;
+
+        padding: 5px 10px;
         color: #fff;
         background: transparent;
         border: 1px solid #fff;

@@ -7,12 +7,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./new.scss";
-
+import { useTranslation } from "react-i18next";
 const New = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [sliderSettings, setSliderSettings] = useState(null);
+  const { t  } = useTranslation(); 
 
   const fetchPosts = async () => {
     try {
@@ -72,7 +73,7 @@ const New = () => {
   return (
     <div className="container">
       <div className="new">
-        <h2 className="title_h2">Новые поступления</h2>
+        <h2 className="title_h2">{t("New arrivals")}</h2>
         <div className="line"></div>
         <div className="generalCard">
           {sliderSettings ? (

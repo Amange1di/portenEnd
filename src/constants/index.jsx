@@ -1,17 +1,14 @@
-export const headerMenu=[
-   
+export const headerMenu = [
     {
-        name:"ГЛАВНЫЙ",
-        path:"/"
+        name: "HOME",
+        path: "/"
     },
     {
-        name:"ЛИЧНЫЙ КАБИНЕТ",
-        path:"/"
+        name: "PROFILE",
+        path: "/"
     },
     {
-        name:"НАСТРОКИ",
-        path:"/"
-    },
-   
-    
-]
+        name: "SETTINGS",
+        path: "/"
+    }
+];

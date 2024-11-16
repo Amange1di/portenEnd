@@ -9,13 +9,14 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaHeart } from "react-icons/fa";
 import { BiCart } from "react-icons/bi";
-
+import { useTranslation } from "react-i18next";
 
 const Card = ({ post }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const favorites = useSelector((state) => state.favorites.items);
     const isFavorite = favorites.some((item) => item.id === post.id);
+    const { t  } = useTranslation(); 
 
     const truncateText = (text) => {
         return text.split(' ').slice(0, 3).join(' ') + (text.split(' ').length > 5 ? '...' : '');
@@ -28,15 +29,15 @@ const Card = ({ post }) => {
     const handleFavoriteToggle = () => {
         if (isFavorite) {
             dispatch(removeFromLike(post));
-            toast.info("Товар удален из избранного");
+            toast.info(t("Item removed from favorites"));
         } else {
             dispatch(addToLike(post));
-            toast.success("Товар добавлен в избранное");
+            toast.success(t("Item added to favorites"));
         }
     };
     const handleCardToggle=()=>{
          dispatch(addItemToCart(post)) 
-         toast.success("Товар добавлен в корзину");
+         toast.success(t("Item added to cart"));
     }
 
     return (
@@ -66,7 +67,7 @@ const Card = ({ post }) => {
             )}
              <button className="btnCart" onClick={handleCardToggle}>
              <BiCart className="iconCard" />
-             В корзину
+             {t("Add to Cart")}
             </button>
         </div>
     );

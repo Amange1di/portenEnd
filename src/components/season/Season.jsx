@@ -3,8 +3,9 @@ import "./season.scss";
 
 import service from '../../api/service';
 import Card from '../../widgets/card/Card';
-
+import { useTranslation } from "react-i18next";
 const Season = () => {
+    
     const [posts, setPosts] = useState([]);
 
     const cardLimit = 3;
@@ -25,12 +26,12 @@ const Season = () => {
         fetchPosts();
     }, []);
 
-
+    const { t  } = useTranslation(); 
     return (
         <div className='Season'>
             <div className='Season_content'>
                 <div className='Season_generalOne'>
-                    <h2 className='title_h2'>СЕЗОН 2020/21</h2>
+                    <h2 className='title_h2'>{t("Seasons 2020/21")}</h2>
                     <div className='line'></div>
                     <div className="generalCard">
                         {posts.map((post) => (
@@ -40,9 +41,9 @@ const Season = () => {
                 </div>
                 <div className='Season_generalTwo'>
                     <div>
-                        <h2 className='title_h2'>Новая коллекция</h2>
+                        <h2 className='title_h2'>{t("New collection")}</h2>
                         <div className='line'></div>
-                        <button >Каталог</button>
+                        <button >{t("Catalog")}</button>
                         
                     </div>
                 </div>

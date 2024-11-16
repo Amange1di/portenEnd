@@ -1,7 +1,7 @@
 
 import "./hero.scss"
 import logo from '../.././shared/assets/logo.png'
-
+import { useTranslation } from "react-i18next";
 const herodata = [
   {
     
@@ -11,6 +11,7 @@ const herodata = [
   },
 ]
 const Hero = () => {
+  const { t } = useTranslation(); 
   return (
     <div id="hero">
       <div className="">
@@ -25,7 +26,8 @@ const Hero = () => {
                 <h5> {h.title}</h5>
               </div>
             </div>
-            <p> {h.p}</p>
+            <p>  {t(h.p)} </p>
+           
           </div>))}
       </div>
     </div>

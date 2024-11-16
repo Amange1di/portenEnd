@@ -33,10 +33,11 @@ const Cart = () => {
     // const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
+        
         <div className="cart">
-            <h2>Корзина</h2>
+            <h2>{t("Basket")}</h2>
             {items.length === 0 ? (
-                <p>Корзина пуста</p>
+                <p>{t("The basket is empty")}</p>
             ) : (
                 <div>
                     <ul>
@@ -54,14 +55,14 @@ const Cart = () => {
                                             onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))}
                                         />
                                     </div>
-                                    <button onClick={() => handleRemoveItem(item.id)}>{t(" Delete")}</button>
+                                    <button onClick={() => handleRemoveItem(item.id)}>{t("Delete")}</button>
                                 </div>
                             </li>
                         ))}
                     </ul>
                     <div className="cart-btn">
 
-                        <button onClick={handleClearCart}>Очистить корзину</button>
+                        <button onClick={handleClearCart}>{t("Empty the trash")}</button>
                     </div>
                 </div>
             )}
