@@ -15,12 +15,18 @@ const Hero = () => {
     <div id="hero">
       <div className="">
 
+
+
+
+
         {herodata.map((h, index) => (
           <div key={index}>
 
             <div className="porten">
               <div>
                 <img src={logo} alt="" />
+
+                
                 <div className="line"></div>
                 <h5> {t(h.t)}</h5>
               </div>
