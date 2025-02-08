@@ -14,11 +14,6 @@ const Hero = () => {
   return (
     <div id="hero">
       <div className="">
-
-
-
-
-
         {herodata.map((h, index) => (
           <div key={index}>
 
